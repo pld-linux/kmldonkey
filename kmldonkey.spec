@@ -8,7 +8,6 @@ Group:		X11/Applications/Networking
 Source0:	http://savannah.nongnu.org/download/kmldonkey/unstable.pkg/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	0ac91aba88165ae377754156087b421b
 URL:		http://www.gibreel.net/projects/kmldonkey/
-Requires:	mldonkey
 BuildRequires:	fam-devel
 BuildRequires:	kdelibs-devel >= 3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
