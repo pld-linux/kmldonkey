@@ -3,7 +3,7 @@ Summary:	A client for the mldonkey P2P network
 Summary(pl):	Klient dla sieci P2P mldonkey
 Name:		kmldonkey
 Version:	0.10
-Release:	0.6%{_pre}
+Release:	0.7%{_pre}
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://savannah.nongnu.org/download/kmldonkey/%{name}-%{version}%{_pre}.tar.bz2
