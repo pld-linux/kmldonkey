@@ -1,13 +1,14 @@
-%define		_pre	pre3
+%define		_pre	pre4
 Summary:	A client for the mldonkey P2P network
 Summary(pl):	Klient dla sieci P2P mldonkey
 Name:		kmldonkey
 Version:	0.10
-Release:	0.7%{_pre}
+Release:	0.%{_pre}.1
+Epoch:		1
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://savannah.nongnu.org/download/kmldonkey/%{name}-%{version}%{_pre}.tar.bz2
-# Source0-md5:	580b2d2c9f9c48cf83da5c93bf1c950f
+# Source0-md5:	096a45c5202c7d7aa82b8a868300efde
 Patch0:		%{name}-desktop.patch
 URL:		http://www.kmldonkey.org/
 BuildRequires:	automake
@@ -78,7 +79,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/*.desktop
 %{_desktopdir}/kde/*.desktop
 %{_datadir}/services/*.protocol
-%{_datadir}/services/kded/mobilemule.desktop
+%{_datadir}/services/kded/kmldonkeyd.desktop
 %{_datadir}/services/kmldonkey_debugpage.desktop
 %{_datadir}/servicetypes/kmldonkey_plugin.desktop
 %{_mandir}/man1/*
