@@ -1,14 +1,13 @@
-%define		_pre	pre4
 Summary:	A client for the mldonkey P2P network
 Summary(pl):	Klient dla sieci P2P mldonkey
 Name:		kmldonkey
 Version:	0.10
-Release:	0.%{_pre}.3
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications/Networking
-Source0:	http://savannah.nongnu.org/download/kmldonkey/%{name}-%{version}%{_pre}.tar.bz2
-# Source0-md5:	096a45c5202c7d7aa82b8a868300efde
+Source0:	http://savannah.nongnu.org/download/kmldonkey/%{name}-%{version}.tar.bz2
+# Source0-md5:	a1e0f8dc726d88056334e691056d744b
 Patch0:		%{name}-desktop.patch
 URL:		http://www.kmldonkey.org/
 BuildRequires:	automake
@@ -37,7 +36,7 @@ KMLDonkey header files.
 Pliki nag³ówkowe KMLDonkey.
 
 %prep
-%setup -q -n %{name}-%{version}%{_pre}
+%setup -q
 %patch0 -p1
 
 %build
@@ -51,13 +50,11 @@ cp -f /usr/share/automake/config.sub admin
 %install
 rm -rf $RPM_BUILD_ROOT
 
-# strange variable names because of unsermake
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	top_kmldonkey_kdelnkdir=%{_desktopdir} \
-	top_kcmdonkey_kcmdonkeydir=%{_desktopdir}/kde
+	kdelnkdir=%{_desktopdir} \
+	kcmdonkeydir=%{_desktopdir}/kde
 
-rm -rf %{_datadir}/locale/xx
 %find_lang %{name} --with-kde
 
 %clean
