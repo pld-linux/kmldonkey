@@ -1,12 +1,13 @@
+%define		_pre	pre3
 Summary:	A client for the mldonkey P2P network
 Summary(pl):	Klient dla sieci P2P mldonkey
 Name:		kmldonkey
-Version:	0.9.1
-Release:	2
+Version:	0.10
+Release:	0.1%{_pre}
 License:	GPL
 Group:		X11/Applications/Networking
-Source0:	http://savannah.nongnu.org/download/kmldonkey/unstable.pkg/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	0ac91aba88165ae377754156087b421b
+Source0:	http://savannah.nongnu.org/download/kmldonkey/%{name}-%{version}%{_pre}.tar.bz2
+# Source0-md5:	580b2d2c9f9c48cf83da5c93bf1c950f
 URL:		http://www.gibreel.net/projects/kmldonkey/
 BuildRequires:	fam-devel
 BuildRequires:	kdelibs-devel >= 3.0
@@ -33,7 +34,7 @@ KMLDonkey header files.
 Pliki nag³ówkowe KMLDonkey.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}%{_pre}
 
 %build
 kde_appsdir="%{_desktopdir}"; export kde_appsdir
@@ -82,4 +83,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/lib*.la
 %dir %{_includedir}/kmldonkey
 %{_includedir}/kmldonkey/*
-%{_includedir}/*.h
+#%{_includedir}/*.h
