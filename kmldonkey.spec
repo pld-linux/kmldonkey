@@ -43,7 +43,8 @@ Pliki nag³ówkowe KMLDonkey.
 kde_appsdir="%{_desktopdir}"; export kde_appsdir
 kde_htmldir="%{_htmldir}"; export kde_htmldir
 cp /usr/share/automake/config.sub admin
-%configure
+%configure \
+	--with-qt-libraries=%{_prefix}/%{_lib}
 
 %{__make}
 
