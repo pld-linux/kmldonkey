@@ -1,5 +1,5 @@
 Summary:	A client for the mldonkey P2P network
-Summary(pl):	Klient dla sieci mldonkey P2P
+Summary(pl):	Klient dla sieci P2P mldonkey
 Name:		kmldonkey
 Version:	0.9.1
 Release:	1
@@ -18,7 +18,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 KMLDonkey is a client for the mldonkey P2P network.
 
 %description -l pl
-KMLDonkey to klient dla sieci mldonkey P2P.
+KMLDonkey to klient dla sieci P2P mldonkey.
 
 %package devel
 Summary:	KMLDonkey header files
@@ -58,6 +58,9 @@ mv $RPM_BUILD_ROOT%{_applnkdir}/Settings/Network/* $RPM_BUILD_ROOT%{_applnkdir}/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
