@@ -40,7 +40,6 @@ Pliki nag³ówkowe KMLDonkey.
 %build
 kde_appsdir="%{_desktopdir}"; export kde_appsdir
 kde_htmldir="%{_htmldir}"; export kde_htmldir
-kde_icondir="%{_pixmapsdir}"; export kde_icondir
 %configure
 
 %{__make}
@@ -70,12 +69,16 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_desktopdir}/*
 %{_datadir}/apps/*
-%{_pixmapsdir}/*/*/*/*
+%{_iconsdir}/*/*/*/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 %attr(755,root,root) %{_libdir}/kde3/*.so.*.*.*
 %attr(755,root,root) %{_libdir}/kde3/*.so
 %{_libdir}/kde3/*.la
 %{_datadir}/services/*.protocol
+%{_datadir}/services/kded/mobilemule.desktop
+%{_datadir}/services/kmldonkey_debugpage.desktop
+%{_datadir}/servicetypes/kmldonkey_plugin.desktop
+	 
 %{_mandir}/man1/*
 
 %files devel
