@@ -53,8 +53,8 @@ install -d $RPM_BUILD_ROOT%{_desktopdir}/kde
 
 mv $RPM_BUILD_ROOT%{_desktopdir}/Internet/* $RPM_BUILD_ROOT%{_desktopdir}/
 mv $RPM_BUILD_ROOT%{_desktopdir}/Settings/Network/* $RPM_BUILD_ROOT%{_desktopdir}/kde/
-echo "Categories=Qt;KDE;Network;X-Communication" >> $RPM_BUILD_ROOT%{_desktopdir}/kmldonkey.desktop
-echo "Categories=Qt;KDE;X-KDE-settings-network" >> $RPM_BUILD_ROOT%{_desktopdir}/kde/kcmdonkey.desktop
+echo "Categories=Qt;KDE;Network;X-Communication;" >> $RPM_BUILD_ROOT%{_desktopdir}/kmldonkey.desktop
+echo "Categories=Qt;KDE;X-KDE-settings-network;" >> $RPM_BUILD_ROOT%{_desktopdir}/kde/kcmdonkey.desktop
 %find_lang %{name} --with-kde
 
 %clean
