@@ -3,7 +3,7 @@ Summary:	A client for the mldonkey P2P network
 Summary(pl):	Klient dla sieci P2P mldonkey
 Name:		kmldonkey
 Version:	0.10
-Release:	0.%{_pre}.2
+Release:	0.%{_pre}.3
 Epoch:		1
 License:	GPL
 Group:		X11/Applications/Networking
@@ -57,6 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 	top_kmldonkey_kdelnkdir=%{_desktopdir} \
 	top_kcmdonkey_kcmdonkeydir=%{_desktopdir}/kde
 
+rm -rf %{_datadir}/locale/xx
 %find_lang %{name} --with-kde
 
 %clean
