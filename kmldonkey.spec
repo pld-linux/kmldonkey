@@ -8,7 +8,7 @@ License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://savannah.nongnu.org/download/kmldonkey/%{name}-%{version}%{_pre}.tar.bz2
 # Source0-md5:	580b2d2c9f9c48cf83da5c93bf1c950f
-URL:		http://www.gibreel.net/projects/kmldonkey/
+URL:		http://www.kmldonkey.org/
 BuildRequires:	fam-devel
 BuildRequires:	kdelibs-devel >= 3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
