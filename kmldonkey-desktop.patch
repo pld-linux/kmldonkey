@@ -1,0 +1,34 @@
+--- kmldonkey-0.10pre3/kcmdonkey/kcmdonkey.desktop~	Sat Jul 17 07:48:29 2004
++++ kmldonkey-0.10pre3/kcmdonkey/kcmdonkey.desktop	Sat Jul 17 07:48:29 2004
+@@ -12,6 +12,7 @@
+ Comment[hu]=Az MLDonkey-integráció beállításai
+ Comment[it]=Impostazione dell'integrazione di MLDonkey
+ Comment[nl]=MLDonkey-integratie instellen
++Comment[pl]=Zintegrowane ustawienia MLDonkey
+ Comment[pt]=Configuração da integração do MLDonkey
+ Comment[pt_BR]=configuração de integração do MLDonkey
+ Comment[sr]=Mldonkey-јевo успостављање интеграције
+@@ -41,3 +42,5 @@
+ X-KDE-FactoryName=kcmdonkey
+ X-KDE-Library=kcmdonkey
+ X-KDE-ModuleType=Library
++Categories=Qt;KDE;X-KDE-settings-network;
++# vi: encoding=utf-8
+--- kmldonkey-0.10pre3/kmldonkey/kmldonkey.desktop~	Sat Jul 17 07:51:56 2004
++++ kmldonkey-0.10pre3/kmldonkey/kmldonkey.desktop	Sat Jul 17 07:51:56 2004
+@@ -23,6 +23,7 @@
+ Comment[hu]=MLDonkey-előtétprogram a KDE-hez
+ Comment[it]=Un'interfaccia MLDonkey per KDE
+ Comment[nl]=Een MLDonkey-schil voor KDE
++Comment[pl]=Interfejs do MLDonkey dla KDE
+ Comment[pt]=Uma interface do MLDonkey para o KDE
+ Comment[pt_BR]=Uma interface do MLDonkey para o KDE
+ Comment[sr]=Сучеље mldonkey-ја за KDE
+@@ -31,4 +32,6 @@
+ Comment[tr]=KDE için bir MLDonkey Arayüzü
+ Comment[xx]=xxAn MLDonkey frontend for KDExx
+ Comment[zh_CN]=一个 KDE 的 MLDonkey 前端
+-Terminal=0
++Terminal=false
++Categories=Qt;KDE;Network;FileTransfer;
++# vi: encoding=utf-8
