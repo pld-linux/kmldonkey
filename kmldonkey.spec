@@ -10,7 +10,8 @@ Source0:	http://savannah.nongnu.org/download/kmldonkey/%{name}-%{version}%{_pre}
 # Source0-md5:	580b2d2c9f9c48cf83da5c93bf1c950f
 URL:		http://www.kmldonkey.org/
 BuildRequires:	fam-devel
-BuildRequires:	kdelibs-devel >= 3.0
+BuildRequires:	kdebase-devel >= 3.0
+BuildRequires:	pcre-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_htmldir	/usr/share/doc/kde/HTML
