@@ -3,7 +3,7 @@ Summary:	A client for the mldonkey P2P network
 Summary(pl):	Klient dla sieci P2P mldonkey
 Name:		kmldonkey
 Version:	0.10
-Release:	0.1%{_pre}
+Release:	0.2pre3
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://savannah.nongnu.org/download/kmldonkey/%{name}-%{version}%{_pre}.tar.bz2
@@ -54,7 +54,7 @@ install -d $RPM_BUILD_ROOT%{_desktopdir}/kde
 
 mv $RPM_BUILD_ROOT%{_desktopdir}/Internet/* $RPM_BUILD_ROOT%{_desktopdir}/
 mv $RPM_BUILD_ROOT%{_desktopdir}/Settings/Network/* $RPM_BUILD_ROOT%{_desktopdir}/kde/
-echo "Categories=Qt;KDE;Network;X-Communication;" >> $RPM_BUILD_ROOT%{_desktopdir}/kmldonkey.desktop
+echo "Categories=Qt;KDE;Network;FileTransfer;" >> $RPM_BUILD_ROOT%{_desktopdir}/kmldonkey.desktop
 echo "Categories=Qt;KDE;X-KDE-settings-network;" >> $RPM_BUILD_ROOT%{_desktopdir}/kde/kcmdonkey.desktop
 %find_lang %{name} --with-kde
 
