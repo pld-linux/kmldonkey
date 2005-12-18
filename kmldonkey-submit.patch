@@ -1,0 +1,29 @@
+my core reports different message back
+
+kmldonkey: Connecting to 1.1.1.1:4001
+kmldonkey: CoreProtocol message, version 32
+kmldonkey: Using protocol 32
+kmldonkey: Authenticating...
+kmldonkey: Core reported version 2.5.30.17
+kmldonkey: Donkey authenticated.
+kmldonkey: Callback count incremented: 1
+kmldonkey: Submitted URL: ed2k://|file|
+kmldonkey: Callback cmd: dllink "ed2k://|file|
+kmldonkey: Callback result: Added link : ed2k://|file|
+kmldonkey: Callback count decremented: 0
+kmldonkey: Socket closed.
+kmldonkey: Donkey disconnected: 0
+
+posted also to http://bugs.kde.org/show_bug.cgi?id=105455
+
+--- kmldonkey-0.10.1/src/scripts/submit.cpp~	2005-07-26 19:40:40.000000000 +0300
++++ kmldonkey-0.10.1/src/scripts/submit.cpp	2005-12-18 01:53:57.000000000 +0200
+@@ -48,7 +48,7 @@
+ {
+     kdDebug() << "Callback cmd: " << cmd << endl;
+     kdDebug() << "Callback result: " << res << endl;
+-    if (res.lower() != "done" && !res.contains("parsing http url", false)) {
++    if (res.lower() != "done" && !res.contains("parsing http url", false) && !res.contains("Added link")) {
+ 	/*
+ 	if (res.contains("force_download")) {
+ 	    if (KMessageBox::warningYesNo(0, i18n("Failed to submit URL %1\n\nForce download?")
