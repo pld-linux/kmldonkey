@@ -1,5 +1,5 @@
 Summary:	A client for the mldonkey P2P network
-Summary(pl.UTF-8):   Klient dla sieci P2P mldonkey
+Summary(pl.UTF-8):	Klient dla sieci P2P mldonkey
 Name:		kmldonkey
 Version:	0.10.1
 Release:	3
@@ -26,7 +26,7 @@ KMLDonkey to klient dla sieci P2P mldonkey.
 
 %package devel
 Summary:	KMLDonkey header files
-Summary(pl.UTF-8):   Pliki nagłówkowe KMLDonkey
+Summary(pl.UTF-8):	Pliki nagłówkowe KMLDonkey
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
